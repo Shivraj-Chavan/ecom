@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+*{
+padding:0;
+margin:0;
+}
+body{
+background:linear-gradient(to right bottom,blue,white,green);
+background-size:100% 100%;
+height:100%;
+}
+.main{
+background:white;
+width:500px;
+margin:auto;
+padding:50px;
+position:relative;
+top:70px
+}
+.main input{
+display:block;
+width:100%;
+height:30px;
+}
+nav{
+height:70px;
+background:green;
+position:fixed;
+width:100%;
+padding:0 50px
+}
+.fr1{
+position: absolute;
+left:400px
+}
+.fr2{
+    position: absolute;
+    right:400px
+}
+.fr2 input,.fr1 input{
+    height:30px;
+    padding:0 30px;
+    font-size: 20px;
+    margin-top:20px
+}
+input{
+    border:0;
+    border-bottom:1px solid;
+    font-size: 20px;
+}
+input[type="submit"]{
+    border:0;
+
+}
+</style>
+</head>
+<body>
+<nav>
+<form class="fr1"action="adm" method="post">
+<input class="details" type="submit"   name="sub" value="all_details" />
+</form>
+<form class="fr2" action="details" method="post">
+	<input type="tel" pattern="[6-9]{2}[0-9]{8}" placeholder="Enter phone number..." required name="phone"/>
+		<input type="submit" formnovalidate name="sub"  value="show_details" />
+		
+	</form>
+</nav>
+<form class="main" action="adm" method="post">
+	
+	<h1>Registration Page</h1>
+	name:-<input type="text" name="name" required/><br/>
+	number:-<input type="tel" name="phone" pattern="[6-9]{2}[0-9]{8}" required/><br/>
+	loc:-<input type="text" name="loc" required/><br/>
+	course:-<input list="courses" name="course" required /><br/>
+	<datalist id="courses">
+		<option>Full Stack Python</option>
+		<option>Full Stack Java</option>
+		<option>Full Stack .Net</option>
+		<option>Full Stack PHP</option>
+		<option>Python</option>
+		<option>Java</option>
+		<option>PHP</option>
+		<option>.Net</option>
+		<option>C C++ </option>
+		<option>Froent End</option>
+	</datalist>
+	fees:-<input type="number" name="fees" required /><br/>
+	Now paying:-<input type="number" name="pay" required /><br/>
+	email:-<input type="email" name="email" required /><br/>
+	<input type="submit" value="insert" name="sub" />
+	
+	
+	</form>
+	
+	
+</body>
+</html>
